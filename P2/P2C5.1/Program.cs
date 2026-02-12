@@ -17,7 +17,7 @@ switch (nombreArguments)
         chaineUrl = DemanderUneUrl();
         break;
     case 1:
-        chaineUrl = args[0];
+        chaineUrl = args != null ? args[0] : "";
         break;
     default:
         Console.WriteLine("Veuillez exécuter le programme avec une URL ou rien du tout");
@@ -44,8 +44,8 @@ else
 static string DemanderUneUrl()
 {
     Console.WriteLine("Veuillez saisir une URL valide");
-    string url = Console.ReadLine();
-    return url;
+    string? url = Console.ReadLine();
+    return url ?? "";
 }
 
 /// <summary>

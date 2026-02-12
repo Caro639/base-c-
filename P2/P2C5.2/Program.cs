@@ -1,29 +1,37 @@
 ﻿// Définir l'URL à laquelle se connecter
-using System.Net;
+using System.Net.Http;
 
-string chaineUrl = DonneeUtilisateur.DemanderUneUrl();
-
-Console.WriteLine(RecupererContenu(chaineUrl));
-
-/// <summary>
-/// Retourner le contenu de l'URL
-/// </summary>
-/// <param name="url">L'adresse Web dont le contenu sera renvoyé</param>
-string RecupererContenu(string url)
+namespace Communication
 {
-    string contenu = "";
-
-    try
+    public class Program
     {
-        using (WebClient client = new WebClient())
+        public static async Task Main(string[] args)
         {
-            contenu = client.DownloadString(url);
+
+            string chaineUrl = DonneeUtilisateur.DemanderUneUrl();
+
+            Console.WriteLine(await RecupererContenu(chaineUrl));
+
+            /// <summary>
+            /// Retourner le contenu de l'URL
+            /// </summary>
+            /// <param name="url">L'adresse Web dont le contenu sera renvoyé</param>
+            async Task<string> RecupererContenu(string url)
+            {
+                string contenu = "";
+
+                try
+                {
+                    using HttpClient client = new();
+                    contenu = await client.GetStringAsync(url);
+                }
+                catch (HttpRequestException e)
+                {
+                    Console.WriteLine("Impossible d'établir une connexion - " + e.ToString());
+                }
+
+                return contenu;
+            }
         }
     }
-    catch (WebException e)
-    {
-        Console.WriteLine("Impossible d'établir une connexion - " + e.ToString());
-    }
-
-    return contenu;
 }
