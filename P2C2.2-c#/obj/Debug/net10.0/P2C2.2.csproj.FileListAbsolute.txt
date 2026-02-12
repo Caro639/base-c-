@@ -1,0 +1,14 @@
+c:\Users\P193\P2C2.2-c#\bin\Debug\net10.0\P2C2.2.exe
+C:\Users\P193\P2C2.2-c#\bin\Debug\net10.0\P2C2.2.deps.json
+C:\Users\P193\P2C2.2-c#\bin\Debug\net10.0\P2C2.2.runtimeconfig.json
+c:\Users\P193\P2C2.2-c#\bin\Debug\net10.0\P2C2.2.dll
+c:\Users\P193\P2C2.2-c#\bin\Debug\net10.0\P2C2.2.pdb
+c:\Users\P193\P2C2.2-c#\obj\Debug\net10.0\P2C2.2.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\P193\P2C2.2-c#\obj\Debug\net10.0\P2C2.2.AssemblyInfoInputs.cache
+c:\Users\P193\P2C2.2-c#\obj\Debug\net10.0\P2C2.2.AssemblyInfo.cs
+c:\Users\P193\P2C2.2-c#\obj\Debug\net10.0\P2C2.2.csproj.CoreCompileInputs.cache
+c:\Users\P193\P2C2.2-c#\obj\Debug\net10.0\P2C2.2.dll
+c:\Users\P193\P2C2.2-c#\obj\Debug\net10.0\refint\P2C2.2.dll
+c:\Users\P193\P2C2.2-c#\obj\Debug\net10.0\P2C2.2.pdb
+C:\Users\P193\P2C2.2-c#\obj\Debug\net10.0\P2C2.2.genruntimeconfig.cache
+C:\Users\P193\P2C2.2-c#\obj\Debug\net10.0\ref\P2C2.2.dll
