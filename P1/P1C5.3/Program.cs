@@ -1,13 +1,16 @@
-﻿ISet<string> ingredients = new HashSet<string>();
-ingredients.Add("sucre");
-ingredients.Add("chocolat");
-ingredients.Add("beurre");
-ingredients.Add("vanille");
+﻿ISet<string> ingredients = new HashSet<string>
+{
+    "sucre",
+    "chocolat",
+    "beurre",
+    "vanille"
+};
 
-// TODO : ajouter un autre ingrédient à l'ensemble
+// ajouter un autre ingrédient à l'ensemble
+ingredients.Add("farine");
 
-
-// TODO : retirer la vanille de l'ensemble
+// retirer la vanille de l'ensemble
+ingredients.Remove("vanille");
 
 
 // Afficher la liste des ingrédients

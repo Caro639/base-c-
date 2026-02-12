@@ -3,7 +3,7 @@ int allocationCourante = 200;
 // déclarer une variable int epargne
 int epargne = 3000;
 
-// TODO : créer une variable int nommée prime avec pour valeur initiale 500.
+// créer une variable int nommée prime avec pour valeur initiale 500.
 
 int prime = 500;
 

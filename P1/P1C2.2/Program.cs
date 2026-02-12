@@ -1,6 +1,6 @@
 ﻿int epargne = 3000;
 
-// TODO : modifier l'instruction suivante pour utiliser l'opérateur raccourci +=	
+// modifier l'instruction suivante pour utiliser l'opérateur raccourci +=	
 
 
 // epargne = epargne + 500;
