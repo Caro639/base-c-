@@ -1,16 +1,16 @@
-﻿namespace P2C5._3;
-
-public class DonneeUtilisateur
+﻿namespace Communication
 {
-    /// <summary>
+    public class DonneeUtilisateur
+    {
+        /// <summary>
         /// Demande à l'utilisateur de saisir une URL
         /// </summary>
         /// <returns>Une représentation sous forme de chaîne de caractères de l'URL saisie par l'utilisateur</returns>.
         public static string DemanderUneUrl()
         {
             Console.WriteLine("Veuillez saisir une URL valide");
-            string url = Console.ReadLine();
-            return url;
+            string? url = Console.ReadLine();
+            return url ?? string.Empty;
         }
 
         /// <summary>
@@ -29,4 +29,5 @@ public class DonneeUtilisateur
                 return false;
             }
         }
+    }
 }

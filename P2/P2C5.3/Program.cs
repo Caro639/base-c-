@@ -1,38 +1,47 @@
-﻿using P2C5._3;
-using System.Net;
+﻿using System.Net.Http;
 
-string chaineUrl = DonneeUtilisateur.DemanderUneUrl();
-
-var contenu = RecupererContenu(chaineUrl);
-
-try
+namespace Communication
 {
-    EcrireFichier.Ecrire(contenu, "output.txt");
-}
-catch (IOException e)
-{
-    Console.WriteLine("Impossible d'écrire dans le fichier - " + e.ToString());
-}
-
-/// <summary>
-/// Retourner le contenu de l'URL
-/// </summary>
-/// <param name="url">L'URL de la ressource</param>
-static string RecupererContenu(string url)
-{
-    string contenu = "";
-
-    try
+    public class Program
     {
-        using (WebClient webClient = new WebClient())
+        public static async Task Main(string[] args)
         {
-            contenu = webClient.DownloadString(url);
+
+            string chaineUrl = DonneeUtilisateur.DemanderUneUrl();
+
+            var contenu = RecupererContenu(chaineUrl);
+
+            try
+            {
+                EcrireFichier.Ecrire(contenu, "output.txt");
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("Impossible d'écrire dans le fichier - " + e.ToString());
+            }
+
+            /// <summary>
+            /// Retourner le contenu de l'URL
+            /// </summary>
+            /// <param name="url">L'URL de la ressource</param>
+            static string RecupererContenu(string url)
+            {
+                string contenu = "";
+
+                try
+                {
+                    using HttpClient httpClient = new();
+                    {
+                        contenu = httpClient.GetStringAsync(url).Result;
+                    }
+                }
+                catch (HttpRequestException e)
+                {
+                    Console.WriteLine("Impossible d'établir une connexion - " + e.ToString());
+                }
+
+                return contenu;
+            }
         }
     }
-    catch (WebException e)
-    {
-        Console.WriteLine("Impossible d'établir une connexion - " + e.ToString());
-    }
-
-    return contenu;
 }
