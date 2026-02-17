@@ -1,0 +1,11 @@
+=== HISTORIQUE DES TRANSACTIONS ===
+
+--- COMPTE COURANT ---
+17/02/2026 00:07:33: Solde initial: 0 €
+17/02/2026 00:07:44: Dépôt de 450 €. Nouveau solde: 450 €
+17/02/2026 00:07:57: Retrait de 40 €. Nouveau solde: 410 €
+
+--- COMPTE ÉPARGNE ---
+17/02/2026 00:07:33: Solde initial: 0 €
+17/02/2026 00:08:41: Dépôt de 240 €. Nouveau solde: 240 €
+17/02/2026 00:08:54: Retrait de 20 €. Nouveau solde: 220 €
